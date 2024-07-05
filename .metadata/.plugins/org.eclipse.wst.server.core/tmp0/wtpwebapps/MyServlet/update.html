@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Personal Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Update Personal Information</h2>
+    <form action="updateform" method="post">
+        <label for="name">Enter Name for update:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fname" required>
+
+        <label for="motherName">Mother's Name:</label>
+        <input type="text" id="motherName" name="mname" required>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="Zname" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="contact" pattern="[0-9]{10}" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Business">Business</option>
+            <option value="Medicine">Medicine</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gname" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" readonly>
+
+        <button type="submit" value="SUBMIT">Update Information</button>
+    </form>
+
+     <script>
+        // Calculate age based on date of birth
+        document.getElementById('dob').addEventListener('change', function() {
+            var dob = new Date(this.value);
+            var today = new Date();
+            var age = today.getFullYear() - dob.getFullYear();
+            if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
+                age--;
+            }
+            document.getElementById('age').value = age;
+        });
+    </script>  
+</body>
+</html>

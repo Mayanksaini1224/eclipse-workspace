@@ -1,0 +1,21 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.UniqueStore.Model.Order;
+import com.example.UniqueStore.Repository.OrderRepository;
+import com.example.UniqueStore.Service.OrderService;
+
+@Service
+public class OrderServiceImpl implements OrderService{
+
+	@Autowired
+	private OrderRepository orderRepository;
+
+	public Order addOrder(Order order) {
+		
+		return orderRepository.save(order);
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.example.Ecomproject.Service;
+
+public interface ProductService {
+
+}

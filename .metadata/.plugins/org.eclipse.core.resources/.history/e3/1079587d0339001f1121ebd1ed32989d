@@ -1,0 +1,5 @@
+package com.example.UniqueStore.Model;
+
+public class Order {
+
+}

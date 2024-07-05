@@ -1,0 +1,21 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.UniqueStore.Model.Product;
+import com.example.UniqueStore.Repository.ProductRepository;
+import com.example.UniqueStore.Service.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductRepository productRepository;
+	
+	public Product addProduct(Product product) {
+		// TODO Auto-generated method stub
+		return productRepository.save(product);
+	}
+
+}

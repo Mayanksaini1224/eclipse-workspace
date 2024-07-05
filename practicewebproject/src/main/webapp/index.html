@@ -1,0 +1,104 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    /* Basic styling for the form */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type=text], input[type=email], input[type=tel], select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input[type=checkbox] {
+        margin-top: 10px;
+    }
+    input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        margin-right: 10px;
+    }
+    }
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form action="submitform" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="fathername">Father's Name:</label>
+        <input type="text" id="fathername" name="fathername" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <fieldset>
+            <legend><bold>Gender:</bold></legend>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+        </fieldset>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select</option>
+            <option value="btech">Btech</option>
+            <option value="mtech">Mtech</option>
+            <option value="mba">MBA</option>
+        </select>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I accept the terms and conditions</label>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
+</body>
+</html>

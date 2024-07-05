@@ -1,0 +1,14 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import com.example.UniqueStore.Model.User;
+import com.example.UniqueStore.Service.UserService;
+
+public class UserServiceImpl implements UserService{
+
+	@Override
+	public User addUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

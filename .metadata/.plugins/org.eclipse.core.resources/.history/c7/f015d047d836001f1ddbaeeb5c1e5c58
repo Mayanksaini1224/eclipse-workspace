@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Restaurant</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Default text color */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        .hero {
+            background-image: url('hero-bg.jpg');
+            background-color: rgba(0, 0, 0, 0.6); /* Darkened background color */
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffdb70;
+        }
+
+        .menu {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        .menu h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 1.1em;
+            color: #555; /* Adjusted color for description text */
+        }
+
+        .about {
+            background-color: #f5f5f5;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .contact {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .contact ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact ul li {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .contact ul li i {
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .menu-item {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Delicious Restaurant">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Delicious Restaurant</h1>
+            <p>Enjoy our exquisite dishes and warm ambiance.</p>
+            <a href="Menu.html" class="btn">View Menu</a>
+        </div>
+    </section>
+    
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="menu-item1.jpg" alt="Menu Item 1">
+                    <h3>Special Dish 1</h3>
+                    <p>Description of the dish. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="menu-item2.jpg" alt="Menu Item 2">
+                    <h3>Special Dish 2</h3>
+                    <p>Description of the dish. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing a memorable dining experience with our delicious food and excellent service.</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For reservations and inquiries, please contact us at:</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: info@deliciousrestaurant.com</li>
+                <li><i class="fas fa-phone-alt"></i> Phone: +1234567890</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: 123 Main Street, Cityville</li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Delicious Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+]

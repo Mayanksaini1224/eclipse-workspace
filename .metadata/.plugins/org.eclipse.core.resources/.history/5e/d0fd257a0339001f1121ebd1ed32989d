@@ -1,0 +1,5 @@
+package com.example.UniqueStore.Service;
+
+public interface ProductService {
+
+}

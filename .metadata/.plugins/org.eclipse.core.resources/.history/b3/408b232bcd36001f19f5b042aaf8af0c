@@ -1,0 +1,61 @@
+package com.mayank;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class Restaurant extends HttpServlet {
+	public void doPost(HttpServletRequest req,HttpServletResponse res) throws IOException,ServletException{
+		String url = "jdbc:mysql://localhost:3306/restro";
+		String username = "root";
+		String password = "root";
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				try {
+					Connection c=DriverManager.getConnection(url,username,password);
+					res.setContentType("text/html");
+					PrintWriter pw=res.getWriter();
+					pw.println("Connection Established.");
+					String name= req.getParameter("name");
+					System.out.println("Name of student : " + name);
+					pw.println("\nName of customer : " + name);
+					String ordersummary= req.getParameter("orderSummaryText");
+					System.out.println("Name of student : " + ordersummary);
+					pw.println("\nName of customer : " + ordersummary);
+					String city= req.getParameter("city");
+					String email= req.getParameter("email");
+					String phone= req.getParameter("phone");
+					
+					String query = "insert into userstu values( ?, ?, ?, ?, ?, ? )";
+					PreparedStatement statement =c.prepareStatement(query);
+
+					statement.setString(1,name);
+					statement.setString(2,city);
+					statement.setString(3,email);
+					statement.setString(4,phone);
+					statement.setString(5,ordersummary);
+					
+					statement.executeUpdate();
+					System.out.println("Data Inserted.");
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		
+	}
+
+}

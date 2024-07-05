@@ -1,0 +1,27 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.UniqueStore.Model.Cart;
+import com.example.UniqueStore.Repository.CartRepository;
+import com.example.UniqueStore.Service.CartService;
+
+@Service
+public class CartServiceImpl implements CartService{
+
+	
+	private CartRepository cartRepository;
+	public Cart addCart(Cart cart) {
+		// TODO Auto-generated method stub
+		return cartRepository.save(cart);
+	}
+
+	
+	public List<Cart> getAllCart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

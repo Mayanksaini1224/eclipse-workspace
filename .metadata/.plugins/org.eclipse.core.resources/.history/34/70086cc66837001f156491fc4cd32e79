@@ -1,0 +1,55 @@
+package com.example.Ecomproject.Model;
+
+import java.sql.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="PRODUCTDETAILS")
+public class ProductDetails {
+	@Id
+	@Column(name="PRODUCTID")
+	private String ProductId;
+	
+	@Column(name="PRODUCTTYPE")
+	private String producttype;
+	
+	@Column(name="PRODUCTCATEGORY")
+	private String productcategory;
+	
+	@Column(name="NAME")
+	private String name;
+	
+	@Column(name="DETAILS")
+	private String details;
+	
+	@Column(name="BRAND")
+	private String brand;
+	
+	@Column(name="PRODUCTRATING")
+	private Float productrating;
+	
+	@Column(name="MRP")
+	private Float mrp;
+	
+	@Column(name="SALEPRICE")
+	private Float saleprice;
+	
+	@Column(name="DISCOUNTINPERCENTAGE")
+	private Float discountinpercentage;
+	
+	@Column(name="IMAGEURL")
+	private String imageurl;
+	
+	@Column(name="ISACTIVE")
+	private String isactive;
+	
+	@Column(name="ADDEDON")
+	private Date addedon;
+	
+	@Column(name="MODIFEDON")
+	private Date modifiedon;
+}

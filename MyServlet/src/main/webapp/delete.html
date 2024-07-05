@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Record</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], input[type="number"] {
+        padding: 8px;
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #message {
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <h2>Delete Record</h2>
+    <form id="deleteForm" action="deleteform" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="contact" required>
+        <button type="submit">Delete Record</button>
+    </form>
+
+</body>
+</html>

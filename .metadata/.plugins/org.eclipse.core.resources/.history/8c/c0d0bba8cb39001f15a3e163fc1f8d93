@@ -1,0 +1,42 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.UniqueStore.Model.Order;
+import com.example.UniqueStore.Repository.OrderRepository;
+import com.example.UniqueStore.Service.OrderService;
+
+@Service
+public class OrderServiceImpl implements OrderService{
+
+	@Autowired
+	private OrderRepository orderRepository;
+
+	public Order addOrder(Order order) {
+		
+		return orderRepository.save(order);
+	}
+
+	@Override
+	public List<Order> getAllOrder() {
+		// TODO Auto-generated method stub
+		return orderRepository.findAll();
+	}
+
+	@Override
+	public Order getOrderById(Long oid) {
+		// TODO Auto-generated method stub
+		return orderRepository.findById(oid).orElse(null);
+	}
+
+	@Override
+	public void deleteOrder(Long oid) {
+		// TODO Auto-generated method stub
+		orderRepository.deleteById(oid);
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import com.example.UniqueStore.Model.Product;
+import com.example.UniqueStore.Service.ProductService;
+
+public class ProductServiceImpl implements ProductService {
+
+	@Override
+	public Product addProduct(Product product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

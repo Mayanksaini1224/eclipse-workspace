@@ -1,0 +1,8 @@
+package com.example.UniqueStore.Service;
+
+import com.example.UniqueStore.Model.Product;
+
+public interface ProductService {
+
+	Product addProduct(Product product);
+}

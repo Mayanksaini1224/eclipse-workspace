@@ -1,0 +1,5 @@
+package com.example.Ecomproject.Model;
+
+public class ProductDetails {
+
+}

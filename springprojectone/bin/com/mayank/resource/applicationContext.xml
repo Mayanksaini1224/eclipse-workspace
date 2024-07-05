@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<!--  
+    <bean class="com.mayank.bean.employee" id="employee">
+    	<property name="eid" value="45"/>
+        <property name="name" value="Rohit"/>	
+   	    <property name="city" value="Mumbai"/>	
+    		
+    </bean>
+    -->
+    
+        <!-- bean definitions here -->
+        <!--  
+    <bean class="com.mayank.bean.employee" id="employee1">
+    	<property name="eid" value="18"/>
+        <property name="name" value="Virat"/>	
+   	    <property name="city" value="Banglore"/>	
+    		
+    </bean>
+    -->
+    
+<bean class="com.mayank.bean.employee" id="employee">
+<constructor-arg value="100"/>
+<constructor-arg value="Mayank"/>
+<constructor-arg value="Alwar"/>
+</bean>
+    
+<bean class="com.mayank.bean.employee" id="employee1">
+<constructor-arg value="101"/>
+<constructor-arg value="Chetna"/>
+<constructor-arg value="Alwar"/>
+</bean>
+
+</beans>

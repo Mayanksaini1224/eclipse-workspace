@@ -1,0 +1,8 @@
+package com.example.UniqueStore.Service;
+
+import com.example.UniqueStore.Model.User;
+
+public interface UserService {
+
+	User addUser(User user);
+}

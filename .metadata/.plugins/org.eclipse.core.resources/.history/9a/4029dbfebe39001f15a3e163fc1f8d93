@@ -1,0 +1,15 @@
+package com.example.UniqueStore.Service;
+
+import java.util.List;
+
+import com.example.UniqueStore.Model.Cart;
+
+public interface CartService {
+
+	Cart addCart(Cart cart);
+	
+	List<Cart> getAllCart();
+	
+	Cart getCartById(Long cid);
+	
+	void deleteCart(Long cid);

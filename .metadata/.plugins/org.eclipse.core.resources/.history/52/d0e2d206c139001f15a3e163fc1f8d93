@@ -1,0 +1,42 @@
+package com.example.UniqueStore.ServiceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.UniqueStore.Model.User;
+import com.example.UniqueStore.Repository.UserRepository;
+import com.example.UniqueStore.Service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	public User addUser(User user) {
+		// TODO Auto-generated method stub
+		return userRepository.save(user);
+	}
+
+	@Override
+	public List<User> getAllUsers() {
+		// TODO Auto-generated method stub
+		return userRepository.findAll();
+	}
+
+	@Override
+	public User getUserById(Long uid) {
+		// TODO Auto-generated method stub
+		return userRepository.findById(uid).orElse(null);
+	}
+
+	@Override
+	public void deleteById(Long uid) {
+		// TODO Auto-generated method stub
+		userRepository.deleteById(uid);
+		
+	}
+
+}
